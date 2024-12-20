@@ -14,7 +14,7 @@ Airmesh enables real-time drone control over cellular networks and the internet.
 
 .. toctree::
    :maxdepth: 2
-   :caption: :
+   :caption: Contents:
 
    prerequisites
    vpn_configuration
