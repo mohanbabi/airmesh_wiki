@@ -29,7 +29,7 @@ jobs:
     # Build the documentation
     - name: Build documentation
       run: |
-        cd ./docs/source
+        cd ./docs
         make html
 
     # Deploy to GitHub Pages
