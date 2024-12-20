@@ -1,0 +1,7 @@
+
+sphinx==7.1.2; python_version=="3.8"
+sphinx==7.2.6; python_version>"3.8"
+sphinx-tabs==3.*
+docutils<0.19
+requests>=2.31.0
+flake8==3.7.9

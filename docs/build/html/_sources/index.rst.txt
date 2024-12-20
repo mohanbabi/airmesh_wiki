@@ -1,0 +1,80 @@
+.. docs documentation master file, created by
+   sphinx-quickstart on Thu Dec 19 11:50:27 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Airmesh documentation 
+=====================
+
+
+
+Add your content using ``reStructuredText`` syntax. See the
+`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
+documentation for details.
+
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Information for Developers
+
+   getting_started
+   installation
+
+
+..  raw:: html
+
+    </td>
+    <td width="4%">
+    </td>
+    <td width="48%">
+
+-  Real-time two-way communication between your GCS and controller,
+   including GPS position, battery status, and other live information.
+-  Full data logging for comprehensive post mission analysis, with
+   graphing and Google Earth mapping tools
+-  Industry leading control algorithms for vehicles of all types, with
+   robust sensor compensation algorithms, filtering and tuning
+   capabilities
+-  No dead ends -- Advanced users will find endless options for
+   customization and expanded mission capabilities
+
+
+..  raw:: html
+
+    </td>
+    </tr>
+    </table>
+
+
+.. toctree::
+   :hidden:
+   :caption: Mohan
+
+   mohan <https://google.com>
+
+.. toctree::
+   :hidden:
+
+   Home <https://ardupilot.org>
+
+.. toctree::
+   :hidden:
+   :caption: Platforms Using ArduPilot
+
+   
+   Copter <https://ardupilot.org/copter/index.html>
+   Plane <https://ardupilot.org/plane/index.html>
+   Rover <https://ardupilot.org/rover/index.html>
+   Sub <http://ardusub.com/>
+   Blimp <https://ardupilot.org/blimp/index.html>
+   AntennaTracker <https://ardupilot.org/antennatracker/index.html>
+
+.. toctree::
+   :hidden:
+   :caption: Ground Control Stations
+
+   Mission Planner <https://ardupilot.org/planner/index.html>
+   APM Planner 2 <https://ardupilot.org/planner2/index.html>
+   MAVProxy <https://ardupilot.org/mavproxy/index.html>
+
