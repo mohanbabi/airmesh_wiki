@@ -5,6 +5,7 @@ sphinx==7.2.6; python_version>"3.8"   # For Python versions > 3.8
 # Sphinx extensions
 sphinx-tabs==3.*                       # Tabs in documentation
 sphinx-rtd-theme>=1.0.0                # Read the Docs theme
+sphinxcontrib-youtube                  # Embed YouTube videos in documentation
 
 # Dependency to avoid conflicts with Sphinx
 docutils<0.19                          # Required to prevent compatibility issues
