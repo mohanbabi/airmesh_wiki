@@ -6,6 +6,7 @@ on:
       - main  # Run the workflow when changes are pushed to the main branch
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
 
@@ -26,7 +27,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r ./docs/requirements.txt
 
-    # Step 4: Debug installed packages (Optional)
+    # Step 4: List installed packages (Optional)
     - name: List installed packages
       run: pip list
 
@@ -36,7 +37,11 @@ jobs:
         cd ./docs
         make html
 
-    # Step 6: Deploy to GitHub Pages
+    # Step 6: Confirm build files (Optional)
+    - name: List build directory contents
+      run: ls ./docs/build/html
+
+    # Step 7: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
