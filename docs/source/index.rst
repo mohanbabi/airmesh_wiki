@@ -12,7 +12,7 @@ Airmesh enables real-time drone control over cellular networks and the internet.
 
 
 .. image:: ./image/test.png
-   :target: https://example.com
+   :target: ./image/test.png
 
 ---
 
