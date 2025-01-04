@@ -11,7 +11,7 @@ import sphinx_rtd_theme
 
 
 project = 'docs'
-copyright = '2024, Aviavin'
+copyright = '2025, Aviavin'
 author = 'Aviavin'
 
 
