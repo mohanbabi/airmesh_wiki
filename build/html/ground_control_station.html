@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ground Control Station Setup &mdash; docs  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Flight Control Configuration" href="flight_control.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connections_diagram.html">Connections Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Airmesh Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flight_control.html">Flight Control Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ground Control Station Setup</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Ground Control Station Setup</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ground-control-station-setup">
+<h1>Ground Control Station Setup<a class="headerlink" href="#ground-control-station-setup" title="Link to this heading"></a></h1>
+<p>There are two major types of Ground Control Stations (GCS) commonly in use:</p>
+<ol class="arabic simple">
+<li><p><strong>Mission Planner</strong></p></li>
+<li><p><strong>QGroundControl Station</strong></p></li>
+</ol>
+<p>This guide explains how to connect your Flight Controller to a Ground Control Station over a cellular network for daily operations.</p>
+<p><strong>Power on your Flight Control System</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Join the Tailscale Network:</strong></p>
+<ul class="simple">
+<li><p>Ensure your monitoring device (laptop or mobile) is connected to the Tailscale VPN network with a valid data connection.</p></li>
+<li><p>Your Airmesh system and the laptop or mobile device will have separate networks but should be in the same VPN network (Tailscale network).</p></li>
+<li><dl class="simple">
+<dt>Verify connectivity:</dt><dd><ul>
+<li><p>Use the <cite>ping</cite> command to check the IP address of the drone. If the ping is successful, you are ready to proceed.</p></li>
+<li><dl class="simple">
+<dt>If the ping response is not successful, check if:</dt><dd><ul>
+<li><p>A valid data pack is available.</p></li>
+<li><p>The system is powered on correctly.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Open the Ground Control Station software (Mission Planner or QGroundControl Station).</p></li>
+</ul>
+</li>
+<li><p><strong>Connect the Ground Control Station to the Flight Controller:</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>To connect the Ground Control Station (GCS) to the Flight Controller:</dt><dd><ul>
+<li><p>Enter the <strong>IP address</strong> and <strong>port</strong> in the connection options of the Ground Control Station software.</p></li>
+<li><p>Click on <strong>Connect</strong>. The GCS will start displaying real-time flight data.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Note:</strong> Ensure the IP and port match the settings of your Airmesh system.</p></li>
+<li><p>Refer to the reference video below for detailed instructions.</p></li>
+</ul>
+</li>
+<li><p><strong>Test Flight:</strong></p>
+<ul class="simple">
+<li><p>Conduct a test flight to ensure proper connectivity and control.</p></li>
+<li><p>Verify telemetry and commands are functioning as expected.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Reference Video:</strong></p>
+<div class="video_wrapper" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jVLxVc30e1U" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><hr class="docutils" />
+<p><strong>Congratulations!</strong></p>
+<p>Your Airmesh system is now ready for operation.</p>
+<p><strong>Thank You!</strong></p>
+<p style="text-align:center;color:green;"><strong>
+ We sincerely appreciate your trust in our technology and our unwavering commitment to serving you with loyalty and dedication. Should you encounter any issues or require assistance, please don’t hesitate to reach out.</strong>
+<br></br>
+</p><p>Our mission is to educate your team, <strong>increase your operational speed by 50x, and cut costs to half of what you are currently spending with our efficient workflows.</strong> We are here to support you every step of the way and help you achieve unparalleled success.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="flight_control.html" class="btn btn-neutral float-left" title="Flight Control Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Aviavin.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
