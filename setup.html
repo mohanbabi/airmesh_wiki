@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Flight Control Configuration" href="flight_control.html" />
-    <link rel="prev" title="VPN Configuration" href="vpn_configuration.html" /> 
+    <link rel="prev" title="Connections Diagram" href="connections_diagram.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,7 +45,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vpn_configuration.html">VPN Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connections_diagram.html">Connections Diagram</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Airmesh Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flight_control.html">Flight Control Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ground_control_station.html">Ground Control Station Setup</a></li>
@@ -76,36 +76,94 @@
              
   <section id="airmesh-setup">
 <h1>Airmesh Setup<a class="headerlink" href="#airmesh-setup" title="Link to this heading"></a></h1>
-<p>Follow these steps to set up Airmesh:</p>
-<ol class="arabic simple">
-<li><p><strong>Connect to Airmesh Wi-Fi:</strong>
-- Ensure your device is connected to the Airmesh hotspot.</p></li>
-<li><p><strong>Access the Tailscale Interface:</strong>
-- Open your web browser and navigate to the IP address <cite>http://192.168.XX.XX</cite>.</p></li>
-<li><p><strong>Activate Tailscale:</strong>
-- Enter your pre-auth key in the Tailscale interface.
-- Verify that the device is added to your Tailscale account.</p></li>
-<li><p><strong>Verify VPN Connection:</strong>
-- Log in to the Tailscale Admin console and confirm the device is online.</p></li>
+<p>If your circuit connections are complete, provide power using your battery source. An LED will blink to indicate that the power is on (avoid strong daylight to observe the LED blinking). Wait for <strong>30 seconds</strong> for the hotspot named <strong>Airmesh</strong> to be created. Follow these steps to set up Airmesh:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Tip</strong>: Scan the QR code to connect to Airmesh Wi-Fi.</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Connect to Airmesh Wi-Fi:</strong></p>
+<ul>
+<li><p>Ensure your PC or laptop is connected to the Airmesh hotspot.</p>
+<ul>
+<li><p><strong>Wi-Fi Name:</strong> Airmesh</p></li>
+<li><p><strong>Password:</strong> Airmesh123</p></li>
+<li><p><strong>QR Code:</strong> See below:</p>
+<a class="reference internal image-reference" href="_images/wifi.png"><img alt="Airmesh Wi-Fi QR Code" class="align-center" src="_images/wifi.png" style="width: 400px;" /></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Test Internet Connectivity:</strong></p>
+<ul class="simple">
+<li><p>On your PC or laptop, test whether the Internet is working:
+- Open Google Chrome and try searching for something on Google.
+- If the website loads perfectly, proceed to the next step. If not, recharge your SIM card and try again.</p></li>
+</ul>
+</li>
+<li><p><strong>Access the Tailscale Interface:</strong></p>
+<ul>
+<li><dl class="simple">
+<dt>Open your web browser and navigate to the following IP address:</dt><dd><ul class="simple">
+<li><p><a class="reference external" href="http://10.0.2.100:5500/">http://10.0.2.100:5500/</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>You will see the interface as shown below:</p>
+<img alt="Tailscale web interface" class="align-center" src="_images/tailscal_interface.png" />
+</li>
+</ul>
+</li>
+<li><p><strong>Activate Tailscale:</strong></p>
+<ul>
+<li><p>Follow these steps to activate Tailscale:</p>
+<ul>
+<li><p>Click on the <strong>Connect to Tailscale</strong> button.</p></li>
+<li><p>A message below the button will appear: “Please provide a pre-auth key.”</p></li>
+<li><p>Image reference:</p>
+<img alt="Tailscale authentication key input" class="align-center" src="_images/auth_key.png" />
+</li>
+<li><p>Copy the Tailscale pre-auth key.</p></li>
+<li><p>Paste the copied Tailscale pre-auth key into the user input box.</p></li>
+<li><p>Click on the <strong>Connect to Tailscale</strong> button.</p></li>
+<li><p>If successful, a message “Join Successful” will appear.</p></li>
+<li><p>Image reference:</p>
+<img alt="Tailscale join confirmation" class="align-center" src="_images/join_conf.png" />
+</li>
+<li><p>Check the Tailscale Admin panel for all connected machines (devices).</p></li>
+<li><p>If you encounter any errors, verify your data pack is valid and try again. Refer to the video tutorial below for further assistance.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify VPN Connection:</strong></p>
+<ul class="simple">
+<li><p>Verify that the devices are listed:
+- Log in to the Tailscale Admin console and confirm that Airmesh is online.
+- In the device settings, select <strong>Disable Device Expiry</strong> to keep the connection active.</p></li>
+</ul>
+</li>
 </ol>
 <p><strong>Reference Video:</strong>
-For detailed guidance, watch the [setup video](<a class="reference external" href="https://example.com/setup-video">https://example.com/setup-video</a>).</p>
-<p><strong>Next Steps:</strong>
-Proceed to [VPN Configuration](vpn_configuration.rst).</p>
-</section>
+For detailed guidance, watch the setup video below:</p>
+<div class="video_wrapper" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jVLxVc30e1U" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="vpn_configuration.html" class="btn btn-neutral float-left" title="VPN Configuration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="connections_diagram.html" class="btn btn-neutral float-left" title="Connections Diagram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="flight_control.html" class="btn btn-neutral float-right" title="Flight Control Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Aviavin.</p>
+    <p>&#169; Copyright 2024, Aviavin.</p>
   </div>
 
    

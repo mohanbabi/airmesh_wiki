@@ -44,7 +44,7 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vpn_configuration.html">VPN Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connections_diagram.html">Connections Diagram</a></li>
 <li class="toctree-l1"><a class="reference internal" href="setup.html">Airmesh Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flight_control.html">Flight Control Configuration</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ground Control Station Setup</a></li>
@@ -75,19 +75,68 @@
              
   <section id="ground-control-station-setup">
 <h1>Ground Control Station Setup<a class="headerlink" href="#ground-control-station-setup" title="Link to this heading"></a></h1>
+<p>There are two major types of Ground Control Stations (GCS) commonly in use:</p>
 <ol class="arabic simple">
-<li><p><strong>Join the Tailscale Network:</strong>
-- Ensure your Ground Control Station (PC or mobile device) is connected to the same Tailscale network as the Airmesh system.</p></li>
-<li><p><strong>Control the Drone:</strong>
-- Open your preferred GCS software (e.g., Mission Planner).
-- Connect to the drone using the Tailscale-provided IP address.</p></li>
-<li><p><strong>Test Flight:</strong>
-- Conduct a test flight to ensure proper connectivity and control.</p></li>
+<li><p><strong>Mission Planner</strong></p></li>
+<li><p><strong>QGroundControl Station</strong></p></li>
 </ol>
-<p><strong>Reference Video:</strong>
-Watch the [GCS setup video](<a class="reference external" href="https://example.com/gcs-setup-video">https://example.com/gcs-setup-video</a>).</p>
-<p>—</p>
-<p>Congratulations! Your Airmesh system is now ready for operation.</p>
+<p>This guide explains how to connect your Flight Controller to a Ground Control Station over a cellular network for daily operations.</p>
+<p><strong>Power on your Flight Control System</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Join the Tailscale Network:</strong></p>
+<ul class="simple">
+<li><p>Ensure your monitoring device (laptop or mobile) is connected to the Tailscale VPN network with a valid data connection.</p></li>
+<li><p>Your Airmesh system and the laptop or mobile device will have separate networks but should be in the same VPN network (Tailscale network).</p></li>
+<li><dl class="simple">
+<dt>Verify connectivity:</dt><dd><ul>
+<li><p>Use the <cite>ping</cite> command to check the IP address of the drone. If the ping is successful, you are ready to proceed.</p></li>
+<li><dl class="simple">
+<dt>If the ping response is not successful, check if:</dt><dd><ul>
+<li><p>A valid data pack is available.</p></li>
+<li><p>The system is powered on correctly.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Open the Ground Control Station software (Mission Planner or QGroundControl Station).</p></li>
+</ul>
+</li>
+<li><p><strong>Connect the Ground Control Station to the Flight Controller:</strong></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>To connect the Ground Control Station (GCS) to the Flight Controller:</dt><dd><ul>
+<li><p>Enter the <strong>IP address</strong> and <strong>port</strong> in the connection options of the Ground Control Station software.</p></li>
+<li><p>Click on <strong>Connect</strong>. The GCS will start displaying real-time flight data.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Note:</strong> Ensure the IP and port match the settings of your Airmesh system.</p></li>
+<li><p>Refer to the reference video below for detailed instructions.</p></li>
+</ul>
+</li>
+<li><p><strong>Test Flight:</strong></p>
+<ul class="simple">
+<li><p>Conduct a test flight to ensure proper connectivity and control.</p></li>
+<li><p>Verify telemetry and commands are functioning as expected.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Reference Video:</strong></p>
+<div class="video_wrapper" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jVLxVc30e1U" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><hr class="docutils" />
+<p><strong>Congratulations!</strong></p>
+<p>Your Airmesh system is now ready for operation.</p>
+<p><strong>Thank You!</strong></p>
+<p style="text-align:center;color:green;"><strong>
+ We sincerely appreciate your trust in our technology and our unwavering commitment to serving you with loyalty and dedication. Should you encounter any issues or require assistance, please don’t hesitate to reach out.</strong>
+<br></br>
+</p><p>Our mission is to educate your team, <strong>increase your operational speed by 50x, and cut costs to half of what you are currently spending with our efficient workflows.</strong> We are here to support you every step of the way and help you achieve unparalleled success.</p>
 </section>
 
 
@@ -100,7 +149,7 @@ Watch the [GCS setup video](<a class="reference external" href="https://example.
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Aviavin.</p>
+    <p>&#169; Copyright 2024, Aviavin.</p>
   </div>
 
    
