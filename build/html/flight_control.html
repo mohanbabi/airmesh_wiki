@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flight Control Configuration &mdash; docs  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7f41d439"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ground Control Station Setup" href="ground_control_station.html" />
+    <link rel="prev" title="Airmesh Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="connections_diagram.html">Connections Diagram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Airmesh Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flight Control Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ground_control_station.html">Ground Control Station Setup</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Flight Control Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flight-control-configuration">
+<h1>Flight Control Configuration<a class="headerlink" href="#flight-control-configuration" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p><strong>Setup Flight Controller Serial Port:</strong></p>
+<ul>
+<li><p><strong>Telemetry-Port1 Setup:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Connect your flight controller to the PC via a USB cable.</p></li>
+<li><p>Open <strong>Mission Planner</strong> and connect the flight controller to Mission Planner.</p></li>
+<li><dl class="simple">
+<dt>Navigate to the <strong>Full Parameter List</strong> and search for the following parameters (x = 0, 1, 2, 3 depending on the port used):</dt><dd><ul>
+<li><p><strong>SERIALx_BAUD</strong> = 57 (which means 57600 baud rate).</p></li>
+<li><p><strong>SERIALx_PROTOCOL</strong> = 2 (which means MAVLink2 protocol).</p></li>
+<li><p>The value of <cite>x</cite> depends on your telemetry port. If you are using <strong>Telemetry-Port1</strong>, set:
+- <strong>SERIAL1_BAUD</strong> = 57 (57600 baud rate).
+- <strong>SERIAL1_PROTOCOL</strong> = 2 (MAVLink2 protocol).</p></li>
+<li><p>These values are for standard reference and should match the settings in the Airmesh flight control interface.</p></li>
+<li><p>Note down the values of <strong>SERIALx_BAUD</strong> and <strong>SERIALx_PROTOCOL</strong>. Use these values in the Flight Control interface of Airmesh.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Write the parameters to the flight controller and perform a <strong>power reboot</strong>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Power on the entire system and wait for the Airmesh Wi-Fi to become available.</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Connect to Airmesh Wi-Fi:</strong></p>
+<ul>
+<li><dl>
+<dt>Ensure your PC or device connects to the Airmesh Wi-Fi network:</dt><dd><ul class="simple">
+<li><p><strong>Wi-Fi Name:</strong> Airmesh</p></li>
+<li><p><strong>Password:</strong> Airmesh123</p></li>
+<li><p><strong>QR Code:</strong> Scan the QR code below to connect:</p></li>
+</ul>
+<a class="reference internal image-reference" href="_images/wifi.png"><img alt="Airmesh Wi-Fi QR Code" class="align-center" src="_images/wifi.png" style="width: 400px;" /></a>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p><strong>Access the Flight Control Interface:</strong></p>
+<ul>
+<li><p>Open your web browser and navigate to the following IP address:
+- <a class="reference external" href="http://10.0.2.100:3000/">http://10.0.2.100:3000/</a></p></li>
+<li><p>Click <strong>Flight Controllers</strong> on the left-hand side of the page.</p></li>
+<li><p>The interface should appear as shown in the image below:</p>
+<a class="reference internal image-reference" href="_images/sample.png"><img alt="Diagram showing the Airmesh flight control interface." class="align-center" src="_images/sample.png" style="width: 80%;" /></a>
+</li>
+</ul>
+</li>
+<li><p><strong>Follow the Video Instructions:</strong></p>
+<ul>
+<li><p>Refer to the video tutorial below for detailed guidance on completing the setup:</p>
+<div class="video_wrapper" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jVLxVc30e1U" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></li>
+</ul>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Airmesh Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ground_control_station.html" class="btn btn-neutral float-right" title="Ground Control Station Setup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Aviavin.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
